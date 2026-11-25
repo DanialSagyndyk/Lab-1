@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#142b49" />
+  <title>You're offline · ProductHub</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#f7f9fc;color:#26364b;font-family:Arial,sans-serif}.panel{width:min(100%,520px);padding:42px 30px;text-align:center;background:#fff;border:1px solid #e6edf2;border-radius:20px;box-shadow:0 18px 55px #1c3a5010}.mark{width:64px;height:64px;margin:0 auto 20px;display:grid;place-items:center;border-radius:18px;background:#e7f2f1;color:#208e96;font-size:30px}.eyebrow{color:#208e96;font-size:12px;font-weight:bold;letter-spacing:2px}.panel h1{margin:12px 0;color:#152b48;font-size:30px}.panel p{color:#718296;line-height:1.7}.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:25px}a,button{min-height:46px;padding:13px 18px;border:0;border-radius:9px;background:#142b49;color:#fff;text-decoration:none;font-weight:bold;cursor:pointer}a.secondary{background:#e7f2f1;color:#247f87}
+  </style>
+</head>
+<body><main class="panel"><div class="mark">⌁</div><div class="eyebrow">PRODUCTHUB · OFFLINE MODE</div><h1>You're currently offline</h1><p>We couldn't load this page because there is no internet connection. Previously opened product pages and saved public catalogue data may still be available.</p><p id="connection">Waiting for a connection…</p><div class="actions"><button onclick="location.reload()">Retry connection</button><a class="secondary" href="/">Go to home</a></div></main><script>function update(){document.getElementById('connection').textContent=navigator.onLine?'Connection restored. Retry to continue.':'No internet connection detected.'}addEventListener('online',update);addEventListener('offline',update);update();</script></body></html>
